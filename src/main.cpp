@@ -1779,11 +1779,11 @@ int64_t GetBlockValue(int nHeight)
         nSubsidy = 0 * COIN;
     } else if (nHeight >= 1 && nHeight <= 10) {
             nSubsidy = 1000000000 * COIN; 
-    } else if (nHeight < 500 && nHeight > 10) {
+    } else if (nHeight < 50 && nHeight > 10) {
         nSubsidy = 1000 * COIN;
-    } else if (nHeight < (Params().NetworkID() == CBaseChainParams::TESTNET ? 145000 : 151200) && nHeight >= 500) {
+    } else if (nHeight < (Params().NetworkID() == CBaseChainParams::TESTNET ? 145 : 151) && nHeight >= 50) {
         nSubsidy = 1000 * COIN;
-    } else if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 151200) {
+    } else if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 151) {
         nSubsidy = 1000 * COIN;
     } else if (nHeight <= 302399 && nHeight > Params().LAST_POW_BLOCK()) {
         nSubsidy = 4000 * COIN;
